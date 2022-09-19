@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -9,22 +11,33 @@ public class Main {
         System.out.println("Mesajın 6.Elemanı : " + mesaj.charAt(5));
         System.out.println(mesaj.concat(" Yaşasın!"));
         System.out.println(mesaj);
-        System.out.println("Mesaj B ile mi başlıyor : "+mesaj.startsWith("B"));
-        System.out.println("Mesaj b ile mi başlıyor : "+mesaj.startsWith("b"));
-        System.out.println("Mesaj A ile mi başlıyor : "+mesaj.startsWith("A"));
-        System.out.println("Mesaj ! ile mi bitiyor : "+mesaj.endsWith("!"));
-        System.out.println("Mesaj l ile mi bitiyor : "+mesaj.endsWith("l"));
-        System.out.println("Mesaj L ile mi bitiyor : "+mesaj.endsWith("L"));
+        System.out.println("Mesaj B ile mi başlıyor : " + mesaj.startsWith("B"));
+        System.out.println("Mesaj b ile mi başlıyor : " + mesaj.startsWith("b"));
+        System.out.println("Mesaj A ile mi başlıyor : " + mesaj.startsWith("A"));
+        System.out.println("Mesaj ! ile mi bitiyor : " + mesaj.endsWith("!"));
+        System.out.println("Mesaj l ile mi bitiyor : " + mesaj.endsWith("l"));
+        System.out.println("Mesaj L ile mi bitiyor : " + mesaj.endsWith("L"));
 
-        char[] karakterler=new char[6];
-        mesaj.getChars(0,6,karakterler,0);
-        System.out.println(karakterler);
+        char[] karakterler = new char[6];
+        mesaj.getChars(0, 6, karakterler, 0);
+        System.out.println("Mesaj getChars fonksiyonu ile karakterler : " + karakterler);
 
-        System.out.println("Mesaj içerisinde 'a' nın index numarası : "+mesaj.indexOf('a'));
-        System.out.println("Mesaj içerisinde 'va' nın index numarası : "+mesaj.indexOf("va"));
+        System.out.println("Mesaj içerisinde 'a' nın index numarası : " + mesaj.indexOf('a'));
+        System.out.println("Mesaj içerisinde 'va' nın index numarası : " + mesaj.indexOf("va"));
 
-        System.out.println("Mesaj içerisinde 'a' nın sağdan başlayarak index numarası : "+mesaj.lastIndexOf('a'));
-        System.out.println("Mesaj içerisinde 'va' nın sağdan başlayarak index numarası : "+mesaj.lastIndexOf("va"));
+        System.out.println("Mesaj içerisinde 'a' nın sağdan başlayarak index numarası : " + mesaj.lastIndexOf('a'));
+        System.out.println("Mesaj içerisinde 'va' nın sağdan başlayarak index numarası : " + mesaj.lastIndexOf("va"));
+
+        System.out.println(mesaj.replace(' ', '-'));
+        System.out.println(mesaj.substring(3));
+        System.out.println(mesaj.substring(3));
+
+        for (String kelime:mesaj.split(" "))
+            System.out.println(kelime);
+
+        System.out.println(mesaj.toLowerCase());
+        System.out.println(mesaj.toUpperCase());
+
 
     }
 }
